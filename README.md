@@ -2,7 +2,7 @@
 
 > The only Obsidian-AI plugin that doesn't require a vendor account.
 
-**Status:** v0.1 — planning. Not yet released.
+**Status:** v0.1 — in development.
 
 **Sovereignty:** sovereign-by-construction. BYO endpoint, BYO key, BYO model.
 A local-only configuration is documented and tested.
@@ -18,18 +18,36 @@ The only Obsidian-AI plugin that doesn't require a vendor account.
 
 ## What this isn't
 
-Not a replacement for Obsidian. Not a writing assistant. Not a graph-rendering tool. AI integration that respects the Obsidian ethos.
+See [PRD-v1.md](./PRD-v1.md) for the full anti-scope definition.
 
 ## Install
 
-> Coming with v0.1 release.
+### From package manager (when v0.1 ships)
+
+```bash
+Copy to .obsidian/plugins/obsidian-llm/
+```
+
+### Build from source
+
+```bash
+git clone https://github.com/sovereign-shovels/obsidian-llm.git
+cd obsidian-llm
+```
+# Build
+npm install
+npm run build
+
+# Copy to your vault
+cp -r dist/ ~/.obsidian/plugins/obsidian-llm/
+```
 
 ## Configure
 
 You bring the model. By default `obsidian-llm` tries to use a local provider:
 
 - For LLM endpoints: Ollama at `http://localhost:11434`
-- For voice endpoints: configurable, see [docs/configure.md]
+- For voice endpoints: configurable, see docs
 
 To use any other provider (Claude, GPT, Hermes, OpenRouter, Sarvam, etc.):
 
@@ -46,7 +64,7 @@ LM Studio, and vLLM all work via their OpenAI-compatible endpoints.
 
 ## Why this exists
 
-Every Obsidian AI plugin requires you to bring an Anthropic key, an OpenAI key, or sign up for a paid service. The Obsidian community prides itself on self-hosting, sovereignty, and local-first computing. obsidian-llm is the plugin that respects that — works fully with local Ollama, accepts any OpenAI-compatible endpoint, never indexes your vault to anyone.
+See [PRD-v1.md](./PRD-v1.md) for the problem statement and rationale.
 
 ## What's next
 
