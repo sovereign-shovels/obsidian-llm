@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-llm",
+  "name": "Obsidian LLM",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Chat with local models inside Obsidian. No vendor account required.",
+  "author": "Sovereign Shovels",
+  "authorUrl": "https://github.com/sovereign-shovels",
+  "isDesktopOnly": false
+}
