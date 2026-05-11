@@ -8,6 +8,35 @@
 
 ---
 
+## Architecture
+
+```
+┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
+│   Obsidian      │────▶│  obsidian-   │────▶│   Ollama /      │
+│   vault         │     │   llm        │     │   OpenRouter    │
+│  (markdown      │     │  (TS plugin) │     │   / any LLM     │
+│   notes)        │     └──────────────┘     └─────────────────┘
+└─────────────────┘            │
+                               ▼
+                        ┌──────────────┐
+                        │  Chat panel  │
+                        │  Summarize   │
+                        │  note        │
+                        └──────────────┘
+```
+
+## What this is
+
+Chat with your vault using any LLM endpoint. Ollama by default. No API keys required for local use. No subscription. Just your notes and your model.
+
+## What this isn't
+
+- Not a RAG system in v0.1 (full vault search comes in v0.5)
+- Not a cloud sync service
+- Not affiliated with Obsidian
+
+---
+
 ## Install
 
 1. Download `main.js` and `manifest.json` from the latest release.
@@ -30,6 +59,8 @@ npm run build
 - **Configure:** Settings → Obsidian LLM → set endpoint, model, API key
 
 Default endpoint: `http://localhost:11434/v1/chat/completions` (Ollama)
+
+**Verified:** `npm run build` compiles cleanly with `tsc`. Install `main.js` + `manifest.json` into `.obsidian/plugins/obsidian-llm/` to use.
 
 ---
 

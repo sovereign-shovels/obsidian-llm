@@ -61,3 +61,4 @@ Obsidian themselves shipping a first-party AI feature. Watch their roadmap.
 
 Status: not triggered.
 - 2026-05-10 — v0.1 built — Obsidian plugin with LLM chat and summarize commands
+- 2026-05-10 — hardened against local Ollama — all CLI paths verified, compile+tests green
